@@ -5,7 +5,7 @@
 - [**LINK TO GITHUB**](https://github.com/alwaysblue21/Project-2)
 - [**LINK TO DEPLOYED WEBSITE**](https://project2-kale-a5g6.onrender.com/)
 - **List of Technologies used:** HTML, JS, CSS, Node, Express, EJS, Mongo
-- [**LINK TO TRELLO**](http://www.render.com)
+- [**LINK TO TRELLO**](https://trello.com/b/Fuv79Y6m/project2)
 
 ## Description
 
