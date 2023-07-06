@@ -20,8 +20,13 @@ Will be able to create LOL league champions with full CRUD
 
 | ENDPOINT | METHOD | PURPOSE |
 |----------|--------|---------|
-| /dog | get | list all dogs |
-|/dog/:id | get | list one dog |
+| /lolchampions | get | list all LOL champions |
+| /lolchampions/:id | get | list one LOL champions |
+| /lolchampions/:id/new | get | create a new LOL champion |
+| /lolchampions/ | post | create a LOL champion |
+| /lolchampions/:id/edit | get | edit a LOL champion |
+| /lolchampions/:id | put | update a LOL champion |
+| /lolchampions/:id | delete | delete a LOL champion |
 
 ## ERD (ENTITY RELATIONSHIP DIAGRAM)
 
