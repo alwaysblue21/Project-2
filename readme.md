@@ -30,6 +30,6 @@ Will be able to create LOL league champions with full CRUD
 
 ## ERD (ENTITY RELATIONSHIP DIAGRAM)
 
-![PICTURE OF ERD](http://imgur.com)
+![PICTURE OF ERD](https://i.imgur.com/yyYfrsr_d.jpg?maxwidth=520&shape=thumb&fidelity=high)
 
 - [Free ERD Diagram Tool](https://dbdiagram.io/home)
