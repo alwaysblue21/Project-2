@@ -13,8 +13,8 @@ Will be able to create LOL league champions with full CRUD
 
 ## Mock UP of UI
 
-- ![Desktop View](http://imgur.com)
-- ![Mobile View](http://imgur.com)
+- ![Desktop View](https://imgur.com/a/kMSwZIM)
+- ![Mobile View](https://imgur.com/a/kMSwZIM)
 
 ## List of Backend Endpoints
 
