@@ -11,6 +11,7 @@ const app = express();
 app.use(morgan('dev')); // logging
 app.use(methodOverride('_method')); // override with POST having ?_method=DELETE or ?_method=PUT
 app.use(express.static('public')); // serve static files from public folder
+app.use(express.urlencoded({ extended: false })); // whenever we send a form we need urlencoded
 
 // Routes
 
@@ -34,7 +35,13 @@ app.get("/lolchampions/new", (req, res) => {
 // update
 
 // create 
-app.post("/lolchampions", (req, res) => {
+app.post("/lolchampions", async (req, res) => {
+    if (req.body.readyToBattle === "on" ) {
+        req.body.readyToBattle = true;
+    } else {
+        req.body.readyToBattle = false;
+    }
+    await LolChampion.create(req.body)
     res.redirect("/lolchampions")
 })
 // edit
