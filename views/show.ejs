@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <%- include("./partials/head.ejs") %>
 <body>
     <nav>
         <a href="/lolchampions"><button>Back To The Lol Champions List</button></a>
@@ -16,12 +12,12 @@
     <p>Role: <%= lolChampion.role %></p>
     <p>Ready To Battle: <%= lolChampion.readyToBattle %></p>
 
-    <form method="POST" action="/lolchampions/<%= lolChampion._id %>?_method=DELETE">
-        <input type="submit" name="" value="Delete Lol Champion" />
-    </form>
-
     <a href="/lolchampions/<%= lolChampion._id %>/edit">
         <button>Edit Lol Champion</button>    
     </a>
+
+    <form method="POST" action="/lolchampions/<%= lolChampion._id %>?_method=DELETE">
+        <input type="submit" name="" value="Delete Lol Champion" />
+    </form>
 </body>
 </html>
