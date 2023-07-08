@@ -1,9 +1,9 @@
 const mongoose = require("./connection");
 
 const lolChampionSchema = new mongoose.Schema({
-    championName: String,
-    level: Number,
-    role: String,
+    championName: { type: String, required: true },
+    level: { type: Number, required: true },
+    role: { type: String, required: true },
     readyToBattle: Boolean
 });
 
