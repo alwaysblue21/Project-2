@@ -47,6 +47,10 @@ app.post("/lolchampions", async (req, res) => {
 // edit
 
 // show
+app.get("/lolchampions/:id", async (req, res) => {
+    const foundLolChampion = await LolChampion.findById(req.params.id)
+    res.render("show.ejs", { lolChampion: foundLolChampion })
+})
 
 
 

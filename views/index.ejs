@@ -7,8 +7,18 @@
 </head>
 <body>
     <h1>Lol Champions</h1>
+    <nav>
+        <button>
+            <a href="/lolchampions/new">Add A Lol Champion</a>
+        </button>
+    </nav>
+
     <% lolChampions.forEach(lolChampion => { %>
-        <li><%= lolChampion.championName %></li>
+        <li>
+            <a href="/lolchampions/<%=lolChampion._id %>">
+                <%= lolChampion.championName %>
+            </a>
+        </li>
     <% }) %>
 </body>
 </html>
