@@ -8,16 +8,22 @@
         <a href="/lolchampions"><button>Back To The Lol Champions List</button></a>
     </nav>
 
-    <form action="/lolchampions" method="POST">
-        Lol Champion Name : <input type="text" name="championName" required />
-        <br/>
-        Level : <input type="text" name="level" required />
-        <br/>
-        Role : <input type="text" name="role" required />
-        <br/>
-        Ready To Battle : <input type="checkbox" name="readyToBattle" />
-        <br/>
-        <input type="submit" name="" value="Add Lol Champion">
-    </form>
+    <main>
+        <div>
+            <form action="/lolchampions" method="POST">
+                <fieldset>
+                    Lol Champion Name: <input type="text" name="championName" required />
+                    <br/>
+                    Lol Champion Level: <input type="text" name="level" required />
+                    <br/>
+                    Lol Champion Role: <input type="text" name="role" required />
+                    <br/>
+                    Ready To Battle?: <input type="checkbox" name="readyToBattle" />
+                    <br/>
+                    <input type="submit" name="" value="Add Lol Champion">
+                </fieldset>
+            </form>
+        </div>
+    </main>
 </body>
 </html>

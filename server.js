@@ -14,7 +14,8 @@ app.use(morgan('dev')); // logging
 app.use(methodOverride('_method')); // override with POST having ?_method=DELETE or ?_method=PUT
 app.use(express.static('public')); // serve static files from public folder
 app.use(express.urlencoded({ extended: false })); // whenever we send a form we need urlencoded
-app.use(lolChampionRouter)
+app.use(lolChampionRouter);
+app.use(express.json());
 // Routes
 
 // app.get('/', (req, res) => {

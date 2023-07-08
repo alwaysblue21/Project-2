@@ -5,17 +5,22 @@
     <nav>
         <a href="/lolchampions"><button>Back To The Lol Champions List</button></a>
     </nav>
-
-    <form method="POST" action="/lolchampions/<%= lolChampion._id %>?_method=PUT">
-        <input type="text" name="championName" value="<%= lolChampion.championName %>" />
-        <br/>
-        <input type="text" name="level" value="<%= lolChampion.level %>" />
-        <br/>
-        <input type="text" name="role" value="<%= lolChampion.role %>" />
-        <br/>
-        <input type="checkbox" name="readyToBattle" <%= lolChampion.readyToBattle ? "checked" : "" %> />
-        <br/>
-        <input type="submit" value="Save Edits">
-    </form>
+    <main>
+        <div>
+            <form method="POST" action="/lolchampions/<%= lolChampion._id %>?_method=PUT">
+                <fieldset>
+                    <label>Lol Champion Name: <input type="text" name="championName" value="<%= lolChampion.championName %>" /></label>
+                    <br/>
+                    <label>Lol Champion Level: <input type="text" name="level" value="<%= lolChampion.level %>" /></label>
+                    <br/>
+                    <label>Lol Champion Role: <input type="text" name="role" value="<%= lolChampion.role %>" /></label>
+                    <br/>
+                    <label>Ready To Battle?: <input type="checkbox" name="readyToBattle" <%= lolChampion.readyToBattle ? "checked" : "" %> /></label>
+                    <br/>
+                    <input type="submit" value="Save Edits">
+                </fieldset>
+            </form>
+        </div>
+    </main>
 </body>
 </html>
