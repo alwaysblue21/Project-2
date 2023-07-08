@@ -31,7 +31,10 @@ app.get("/lolchampions/new", (req, res) => {
 })
 
 // delete
-
+app.delete("/lolchampions/:id", async (req, res) => {
+    await LolChampion.findByIdAndDelete(req.params.id)
+    res.redirect("/lolchampions")
+})
 // update
 
 // create 
