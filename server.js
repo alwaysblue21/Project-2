@@ -23,14 +23,20 @@ app.get("/lolchampions", async (req, res) => {
     const allLolChampions = await LolChampion.find({});
     res.render("index.ejs", {lolChampions: allLolChampions})
 })
+
 // new 
+app.get("/lolchampions/new", (req, res) => {
+    res.render("new.ejs")
+})
 
 // delete
 
 // update
 
 // create 
-
+app.post("/lolchampions", (req, res) => {
+    res.redirect("/lolchampions")
+})
 // edit
 
 // show
