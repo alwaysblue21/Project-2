@@ -3,6 +3,11 @@
     <%- include("./partials/head.ejs") %>
 <body>
     <h1>Create New Lol Champion</h1>
+
+    <nav>
+        <a href="/lolchampions"><button>Back To The Lol Champions List</button></a>
+    </nav>
+
     <form action="/lolchampions" method="POST">
         Lol Champion Name : <input type="text" name="championName" required />
         <br/>
