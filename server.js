@@ -3,7 +3,7 @@ require('dotenv').config(); // bring in our .env vars
 const express = require('express'); // web framework for node
 const morgan = require('morgan'); // logger for node
 const methodOverride = require('method-override'); // allows us to use PUT and DELETE methods
-
+const LolChampion = require("./models/lolchampion");
 // express application
 const app = express();
 
@@ -18,6 +18,19 @@ app.get('/', (req, res) => {
     res.send('Hello World!');
     })
 
+// index
+
+// new 
+
+// delete
+
+// update
+
+// create 
+
+// edit
+
+// show
 
 
 
