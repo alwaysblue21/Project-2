@@ -36,6 +36,15 @@ app.delete("/lolchampions/:id", async (req, res) => {
     res.redirect("/lolchampions")
 })
 // update
+app.put("/lolchampions/:id", async (req, res) => {
+    if (req.body.readyToBattle === "on") {
+        req.body.readyToBattle = true;
+    } else {
+        req.body.readyToBattle = false;
+    }
+    await LolChampion.findByIdAndUpdate(req.params.id, req.body);
+    res.redirect("/lolchampions");
+})
 
 // create 
 app.post("/lolchampions", async (req, res) => {
@@ -48,6 +57,10 @@ app.post("/lolchampions", async (req, res) => {
     res.redirect("/lolchampions")
 })
 // edit
+app.get("/lolchampions/:id/edit", async (req, res) => {
+    const lolChampion = await LolChampion.findById(req.params.id)
+    res.render("edit.ejs", { lolChampion })
+})
 
 // show
 app.get("/lolchampions/:id", async (req, res) => {

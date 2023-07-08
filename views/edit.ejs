@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="/lolchampions"><button>Back To The Lol Champions List</button></a>
+    </nav>
+
+    <form method="POST" action="/lolchampions/<%= lolChampion._id %>?_method=PUT">
+        <input type="text" name="championName" value="<%= lolChampion.championName %>" />
+        <br/>
+        <input type="text" name="level" value="<%= lolChampion.level %>" />
+        <br/>
+        <input type="text" name="role" value="<%= lolChampion.role %>" />
+        <br/>
+        <input type="checkbox" name="readyToBattle" <%= lolChampion.readyToBattle ? "checked" : "" %> />
+        <br/>
+        <input type="submit" value="Save Edits">
+    </form>
+</body>
+</html>
