@@ -16,10 +16,13 @@ app.use(express.static('public')); // serve static files from public folder
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
-    })
+    });
 
 // index
-
+app.get("/lolchampions", async (req, res) => {
+    const allLolChampions = await LolChampion.find({});
+    res.render("index.ejs", {lolChampions: allLolChampions})
+})
 // new 
 
 // delete
