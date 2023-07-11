@@ -17,7 +17,7 @@ router.use((req, res, next) => {
 
 // index
 router.get("/lolchampions", async (req, res) => {
-    const allLolChampions = await LolChampion.find({});
+    const allLolChampions = await LolChampion.find({ username: req.session.username });
     res.render("lolChampions/index.ejs", {lolChampions: allLolChampions})
 })
 
@@ -49,8 +49,11 @@ router.post("/lolchampions", async (req, res) => {
     } else {
         req.body.readyToBattle = false;
     }
-    await LolChampion.create(req.body)
-    res.redirect("/lolchampions")
+
+    req.body.username = req.session.username;
+
+    await LolChampion.create(req.body);
+    res.redirect("/lolchampions");
 })
 // edit
 router.get("/lolchampions/:id/edit", async (req, res) => {
