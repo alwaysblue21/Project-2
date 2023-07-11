@@ -18,7 +18,7 @@ router.use((req, res, next) => {
 // index
 router.get("/", async (req, res) => {
     const allLolChampions = await LolChampion.find({ username: req.session.username });
-    res.render("lolChampions/index.ejs", {lolChampions: allLolChampions})
+    res.render("lolChampions/index.ejs", {lolChampions: allLolChampions, user: req.session.username })
 })
 
 // new 
