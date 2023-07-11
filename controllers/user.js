@@ -35,7 +35,9 @@ router.post("/login", async (req, res) => {
     } else {
         const passmatches = bcrypt.compareSync(req.body.password, user.password)
         if (passmatches) {
-        res.redirect("/lolchampions");
+            req.session.username = req.body.username;
+            req.session.loggedIn = true;
+            res.redirect("/lolchampions");
         } else {
             res.send("wrong password")
         }

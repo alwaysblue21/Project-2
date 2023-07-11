@@ -3,9 +3,9 @@ const LolChampion = require("../models/lolchampion")
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.send('Hello World!');
-    });
+// router.get('/', (req, res) => {
+//     res.send('Hello World!');
+//     });
 
 // index
 router.get("/lolchampions", async (req, res) => {
