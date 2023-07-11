@@ -10,12 +10,12 @@ router.get('/', (req, res) => {
 // index
 router.get("/lolchampions", async (req, res) => {
     const allLolChampions = await LolChampion.find({});
-    res.render("index.ejs", {lolChampions: allLolChampions})
+    res.render("lolChampions/index.ejs", {lolChampions: allLolChampions})
 })
 
 // new 
 router.get("/lolchampions/new", (req, res) => {
-    res.render("new.ejs")
+    res.render("lolChampions/new.ejs")
 })
 
 // delete
@@ -47,13 +47,13 @@ router.post("/lolchampions", async (req, res) => {
 // edit
 router.get("/lolchampions/:id/edit", async (req, res) => {
     const lolChampion = await LolChampion.findById(req.params.id)
-    res.render("edit.ejs", { lolChampion })
+    res.render("lolChampions/edit.ejs", { lolChampion })
 })
 
 // show
 router.get("/lolchampions/:id", async (req, res) => {
     const foundLolChampion = await LolChampion.findById(req.params.id)
-    res.render("show.ejs", { lolChampion: foundLolChampion })
+    res.render("lolChampions/show.ejs", { lolChampion: foundLolChampion })
 })
 
 module.exports = router;

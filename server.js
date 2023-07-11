@@ -4,6 +4,8 @@ const express = require('express'); // web framework for node
 const morgan = require('morgan'); // logger for node
 const methodOverride = require('method-override'); // allows us to use PUT and DELETE methods
 
+const userRouter = require("./controllers/user");
+
 // const LolChampion = require("./models/lolchampion");
 const lolChampionRouter = require("./controllers/lolChampionRoutes")
 
@@ -17,6 +19,7 @@ app.use(express.static('public')); // serve static files from public folder
 app.use(express.urlencoded({ extended: false })); // whenever we send a form we need urlencoded
 app.use(lolChampionRouter);
 app.use(express.json());
+app.use("/user", userRouter);
 // Routes
 
 // app.get('/', (req, res) => {
