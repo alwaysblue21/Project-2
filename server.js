@@ -25,7 +25,7 @@ app.use(session({
 }))
 app.use(express.static('public')); // serve static files from public folder
 app.use(express.urlencoded({ extended: false })); // whenever we send a form we need urlencoded
-app.use(lolChampionRouter);
+app.use("/lolchampions", lolChampionRouter);
 app.use(express.json());
 app.use("/user", userRouter);
 // Routes

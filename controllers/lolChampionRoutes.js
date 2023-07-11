@@ -16,23 +16,23 @@ router.use((req, res, next) => {
 //     });
 
 // index
-router.get("/lolchampions", async (req, res) => {
+router.get("/", async (req, res) => {
     const allLolChampions = await LolChampion.find({ username: req.session.username });
     res.render("lolChampions/index.ejs", {lolChampions: allLolChampions})
 })
 
 // new 
-router.get("/lolchampions/new", (req, res) => {
+router.get("/new", (req, res) => {
     res.render("lolChampions/new.ejs")
 })
 
 // delete
-router.delete("/lolchampions/:id", async (req, res) => {
+router.delete("/:id", async (req, res) => {
     await LolChampion.findByIdAndDelete(req.params.id)
     res.redirect("/lolchampions")
 })
 // update
-router.put("/lolchampions/:id", async (req, res) => {
+router.put("/:id", async (req, res) => {
     if (req.body.readyToBattle === "on") {
         req.body.readyToBattle = true;
     } else {
@@ -43,7 +43,7 @@ router.put("/lolchampions/:id", async (req, res) => {
 })
 
 // create 
-router.post("/lolchampions", async (req, res) => {
+router.post("/", async (req, res) => {
     if (req.body.readyToBattle === "on" ) {
         req.body.readyToBattle = true;
     } else {
@@ -56,13 +56,13 @@ router.post("/lolchampions", async (req, res) => {
     res.redirect("/lolchampions");
 })
 // edit
-router.get("/lolchampions/:id/edit", async (req, res) => {
+router.get("/:id/edit", async (req, res) => {
     const lolChampion = await LolChampion.findById(req.params.id)
     res.render("lolChampions/edit.ejs", { lolChampion })
 })
 
 // show
-router.get("/lolchampions/:id", async (req, res) => {
+router.get("/:id", async (req, res) => {
     const foundLolChampion = await LolChampion.findById(req.params.id)
     res.render("lolChampions/show.ejs", { lolChampion: foundLolChampion })
 })
