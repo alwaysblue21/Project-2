@@ -2,10 +2,7 @@
 <html lang="en">
     <%- include("../partials/head.ejs") %>
 <body>
-    <h1>Lol Champions</h1>
-
-    <p>User Name: <%= user %></p>
-
+    <div1>
     <nav>
         <a href="/user/logout"><button>Log Out</button></a>
     </nav>
@@ -13,7 +10,13 @@
     <nav>
         <a href="/lolchampions/new"><button>Add A Lol Champion</button></a>
     </nav>
+    </div1>
+    
+    <h1>Lol Champions</h1>
 
+    <p1>User Name: <%= user %></p1>
+    
+    <box>
     <% lolChampions.forEach(lolChampion => { %>
         <li>
             <a href="/lolchampions/<%=lolChampion._id %>">
@@ -21,5 +24,6 @@
             </a>
         </li>
     <% }) %>
+    </box>
 </body>
 </html>
