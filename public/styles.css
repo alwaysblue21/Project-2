@@ -1,32 +1,46 @@
 li {
     list-style-type: none;
     font-size: 25px;
+    font-family: sans-serif;
   }
 
 h1 {
     text-align: center;
+    font-family: sans-serif;
 }
 
 div1 {
     display: flex;
     padding-left: 10px;
+    margin-top: 10px;
 }
 
 div2 {
     padding-right: 10px;
 }
 
-box {
-    margin-top: 10px;
+div4 {
+    height: 90%;
+    width: 90%;
+    margin-left: 10px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 0 3px black, 0 0 0 6px silver;
+}
+
+fieldset1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-    width: 90%;
-    padding-left: 10px;
-    padding-right: 10px;
     text-align: center;
     background-color: whitesmoke;
     box-shadow: 0 0 0 3px black, 0 0 0 6px silver;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 nav {
@@ -36,13 +50,20 @@ nav {
 
 p1 {
     padding-left: 10px;
+    font-family: cursive;
 }
 
 p {
     padding-left: 10px;
+    font-family: cursive;
 }
 
 li {
     padding-left: 10px;
     padding-right: 10px;
+}
+fieldset {
+    font-family: cursive;
+    background-color: whitesmoke;
+    box-shadow: 0 0 0 3px black, 0 0 0 6px silver;
 }
